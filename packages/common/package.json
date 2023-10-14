@@ -1,0 +1,20 @@
+{
+  "name": "@luna/common",
+  "packageManager": "yarn@3.2.3",
+  "version": "1.0.2",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc-watch --onSuccess \"yarn run -T update-common\" --noClear --onFailure \"echo 'Compilation of @luna/common failed'\"",
+    "onChange": "cd .. && yarn"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.1.3"
+  }
+}

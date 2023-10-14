@@ -1,0 +1,20 @@
+appId: dev.yok.luna
+productName: luna
+copyright: Copyright © 2023 Luna
+directories:
+  output: dist
+  buildResources: resources
+protocols:
+  - name: luna
+    schemes:
+      - luna
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
+mac:
+  entitlements: "./node_modules/electron-builder-notarize/entitlements.mac.plist"
+  hardenedRuntime: true
+afterSign: electron-builder-notarize

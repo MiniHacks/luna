@@ -1,5 +1,5 @@
 {
-  "name": "geese",
+  "name": "luna",
   "packageManager": "yarn@3.2.3",
   "workspaces": [
     "packages/*"
@@ -12,11 +12,12 @@
   },
   "scripts": {
     "prepare": "yarn install; yarn workspaces foreach run prepare",
-    "dev": "yarn env-cmd yarn workspaces foreach -pi run dev",
+    "dev": "yarn env-cmd yarn workspaces foreach -pi --verbose run dev",
     "build": "yarn env-cmd yarn workspaces foreach -pi run build",
     "start": "yarn env-cmd yarn workspaces foreach -pi run start",
     "postinstall": "husky install",
-    "test": "echo \"tests completed\""
+    "test": "echo \"tests completed\"",
+    "update-common": "yarn workspace @luna/common build; yarn install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
