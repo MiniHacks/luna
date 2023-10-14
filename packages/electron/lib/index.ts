@@ -1,1 +1,1 @@
-export * from "./useIPCEvent";
+export * from "../frontend/components/useIPCEvent";
