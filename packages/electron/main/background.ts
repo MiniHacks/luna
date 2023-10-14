@@ -3,6 +3,7 @@ import * as path from "path";
 import serve from "electron-serve";
 import { Channels } from "@luna/common";
 import { createWindow } from "./helpers/createWindow";
+import { processCommand } from "./processCommand";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -100,4 +101,7 @@ ipcMain.on(Channels.PingPong, (event, arg) => {
 ipcMain.on(Channels.CurrentVoicePrompt, (event, arg) => {
   console.log("running CurrentVoicePrompt:", arg);
   event.sender.send(Channels.CurrentVoicePrompt, arg);
+  processCommand(arg).then((response) => {
+    console.log("response:", response);
+  });
 });

@@ -1,4 +1,6 @@
 import { Page, SerializedAXNode } from "puppeteer-core";
+import { ChatCompletionRequestMessage } from "openai";
+import { um } from "../vendor/openai";
 
 function filterSnapshot(
   snapshot: SerializedAXNode | null
@@ -47,4 +49,20 @@ export const getParseableUI = async (
 ): Promise<SerializedAXNode[] | undefined> => {
   const snapshot = await page.accessibility.snapshot({ interestingOnly: true });
   return filterSnapshot(snapshot);
+};
+
+export const createMessageFromPageContent = async (
+  page: Page
+): Promise<ChatCompletionRequestMessage> => {
+  const url = page.url();
+  const title = await page.title();
+  const content = await getParseableUI(page);
+
+  const message = JSON.stringify({
+    url,
+    title,
+    content,
+  });
+
+  return um(message);
 };

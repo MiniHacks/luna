@@ -1,7 +1,7 @@
 import { Page } from "puppeteer-core";
-import { getAriaNode } from "../browser/getAriaNode";
-import { sleep } from "../../utils/common";
 import typeJSON from "@luna/model/functions/type.json";
+import { getAriaNode } from "../browser/getAriaNode";
+import { sleep } from "../vendor/sleep";
 
 export const type = typeJSON;
 //   name: "type",
