@@ -98,6 +98,6 @@ ipcMain.on(Channels.PingPong, (event, arg) => {
 });
 
 ipcMain.on(Channels.CurrentVoicePrompt, (event, arg) => {
-  console.log("CurrentVoicePrompt:", arg);
+  console.log("running CurrentVoicePrompt:", arg);
   event.sender.send(Channels.CurrentVoicePrompt, arg);
 });
