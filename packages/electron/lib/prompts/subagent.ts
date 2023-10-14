@@ -5,7 +5,7 @@ import { um } from "../../utils/common";
 import { overrides } from "../../overrides";
 
 const subagentSystemMessage = (objective: string, mission: string) =>
-  `You are part of Aly, an amazingly smart and powerful browser automation agent. Your objective is to ${objective}. You are just one part of Aly, working to achieve the overarching mission of ${mission} for the user.
+  `You are part of Luna, an amazingly smart and powerful browser automation agent. Your objective is to ${objective}. You are just one part of Aly, working to achieve the overarching mission of ${mission} for the user.
 
 Following messages will always contain
 (1) the URL of your current web page
