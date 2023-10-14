@@ -10,7 +10,7 @@
         {
             "role": "assistant",
             "function_call": {
-                "name": "type",
+                "name": "gotoPage",
                 "arguments": "{\"url\": \"https://www.walmart.com/\"}"
             }
         }
