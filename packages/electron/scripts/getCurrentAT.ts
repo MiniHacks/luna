@@ -14,7 +14,7 @@ const main = async () => {
   }
 
   const aTree = await getParseableUI(page);
-  console.log(JSON.stringify(aTree, null, 2));
+  console.log(JSON.stringify(aTree));
 };
 
 main().then(() => process.exit(0));
