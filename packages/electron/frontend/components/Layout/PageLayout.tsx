@@ -7,7 +7,7 @@ type PageLayoutProps = MyHeadingProps & {
 };
 
 const PageLayout = ({ children, ...props }: PageLayoutProps): JSX.Element => (
-  <Box>
+  <Box height={"100%"}>
     <MyHeading {...props} />
     {children}
   </Box>

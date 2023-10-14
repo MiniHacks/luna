@@ -11,7 +11,7 @@ export default function Document(): JSX.Element {
           height: 100%;
         }
         body {
-          background: rgba(255,255,255, 0.8) !important;
+          background-color: transparent !important;
         } 
         `}
       </style>

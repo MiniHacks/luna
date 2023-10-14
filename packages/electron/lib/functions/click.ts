@@ -1,5 +1,5 @@
 import { Page } from "puppeteer-core";
-import { getAriaNode } from "../../utils/browser/getAriaNode";
+import { getAriaNode } from "../browser/getAriaNode";
 
 export const click = {
   name: "click",

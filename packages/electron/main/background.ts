@@ -50,7 +50,7 @@ if (process.defaultApp) {
   });
 
   const screenBounds = screen.getPrimaryDisplay().bounds;
-  const WIDTH = 600;
+  const WIDTH = 500;
   const HEIGHT = 550;
 
   mainWindow = createWindow("main", {
@@ -64,6 +64,7 @@ if (process.defaultApp) {
     alwaysOnTop: true,
     transparent: true,
   });
+  mainWindow.setIgnoreMouseEvents(true);
 
   if (isProd) {
     await mainWindow.loadURL("app://./home.html");
@@ -72,6 +73,13 @@ if (process.defaultApp) {
     await mainWindow.loadURL(`http://localhost:${port}/home`);
     // uncomment below open dev tools automatically
     // mainWindow.webContents.openDevTools();
+
+    setTimeout(() => {
+      mainWindow.webContents.send(
+        Channels.CurrentVoicePrompt,
+        "Hello, I am Luna. How can I help you?"
+      );
+    }, 500);
   }
 })();
 app.on("window-all-closed", () => {
