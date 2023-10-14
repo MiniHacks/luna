@@ -1,19 +1,7 @@
 import { Page } from "puppeteer-core";
+import gotoPageJSON from "@luna/model/functions/gotoPage.json";
 
-export const gotoPage = {
-  name: "gotoPage",
-  description: "Go to a given page",
-  parameters: {
-    type: "object",
-    properties: {
-      url: {
-        type: "string",
-        description: "The URL of the page to go to",
-      },
-    },
-    required: ["url"],
-  },
-};
+export const gotoPage = gotoPageJSON;
 
 type GotoPageArgs = {
   url: string;

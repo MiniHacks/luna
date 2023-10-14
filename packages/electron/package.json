@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@luna/common": "workspace:*",
+    "@luna/model": "workspace:*",
     "@mozilla/readability": "^0.4.4",
     "electron-json-storage": "^4.6.0",
     "jsdom": "^22.1.0",

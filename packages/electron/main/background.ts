@@ -64,7 +64,7 @@ if (process.defaultApp) {
     alwaysOnTop: true,
     transparent: true,
   });
-  mainWindow.setIgnoreMouseEvents(true);
+  // mainWindow.setIgnoreMouseEvents(true);
 
   if (isProd) {
     await mainWindow.loadURL("app://./home.html");
@@ -95,4 +95,9 @@ ipcMain.on(Channels.PingPong, (event, arg) => {
     Channels.PingPong,
     `[ipcMain] "${arg}" received asynchronously.`
   );
+});
+
+ipcMain.on(Channels.CurrentVoicePrompt, (event, arg) => {
+  console.log("CurrentVoicePrompt:", arg);
+  event.sender.send(Channels.CurrentVoicePrompt, arg);
 });

@@ -1,0 +1,13 @@
+{
+  "name": "@luna/model",
+  "packageManager": "yarn@3.2.3",
+  "version": "1.0.2",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "echo \"model dev >:)\" && exit 0"
+  },
+  "files": [
+    "**/*"
+  ]
+}

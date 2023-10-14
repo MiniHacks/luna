@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Input, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Channels } from "@luna/common";
 import PageLayout from "../components/Layout/PageLayout";
@@ -7,8 +7,9 @@ import { useIPCEvent } from "../components/useIPCEvent";
 
 const Home: NextPage = () => {
   const [currentPrompt, setCurrentPrompt] = useState("Loading...");
-  useIPCEvent<string, string>(Channels.CurrentVoicePrompt, (text) =>
-    setCurrentPrompt(text)
+  const sendPrompt = useIPCEvent<string, string>(
+    Channels.CurrentVoicePrompt,
+    (text) => setCurrentPrompt(text)
   );
   return (
     <PageLayout title={"luna, by minihacks"}>
@@ -31,6 +32,18 @@ const Home: NextPage = () => {
           py={4}
           background={"rgba(53, 53, 53, 0.7)"}
         >
+          <Input
+            placeholder={"prompt"}
+            color={"white"}
+            size={"xs"}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                sendPrompt(currentPrompt);
+              }
+            }}
+            onChange={(e) => setCurrentPrompt(e.target.value)}
+            value={currentPrompt}
+          />
           <Text fontSize={"4xl"} color={"white"}>
             {currentPrompt}
           </Text>

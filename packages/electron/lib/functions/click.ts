@@ -1,24 +1,8 @@
 import { Page } from "puppeteer-core";
+import clickJSON from "@luna/model/functions/click.json";
 import { getAriaNode } from "../browser/getAriaNode";
 
-export const click = {
-  name: "click",
-  description: "Click on a given element on the page",
-  parameters: {
-    type: "object",
-    properties: {
-      role: {
-        type: "string",
-        description: "The role of the element to click on",
-      },
-      name: {
-        type: "string",
-        description: "The name of the element to click on",
-      },
-    },
-    required: ["role", "name"],
-  },
-};
+export const click = clickJSON;
 
 type ClickArgs = {
   role: string;
