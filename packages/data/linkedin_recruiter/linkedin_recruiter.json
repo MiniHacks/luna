@@ -1,0 +1,36 @@
+{
+  "messages": [
+    {"role": "system", "content": "Luna, open LinkedIn and find me Google recruiters" },
+    {"role": "user", "content": [
+      {
+        role: "combobox",
+        name: "Search Google or type a URL"
+      }, {
+        role: "button",
+        name: "Search by voice"
+      }, {
+        role: "button",
+        name: "Search by image"
+      }, {
+        role: "link",
+        name: "Web Store",
+        description: "Web Store",
+        children: [
+          [Object ...], [Object ...]
+        ]
+      }, {
+        role: "button",
+        name: "Add shortcut",
+        description: "Add shortcut"
+      }, {
+        role: "button",
+        name: "Customize Chrome",
+        description: "Customize this page",
+        pressed: false
+      }
+    ]
+    }
+    {"role": "assistant", "function_call": {"name": "goToPage", "arguments": "{\"url\": \"https://www.linkedin.com/feed/\"}"}},
+    {"role": "user", content: [ { role: "heading", name: "0 notifications total", level: 2 }, { role: "button", name: "Close jump menu" }, { role: "link", name: "LinkedIn" }, { role: "button", name: "Click to start a search" }, { role: "link", name: "Home" }, { role: "link", name: "My Network" }, { role: "link", name: "Jobs" }, { role: "link", name: "Messaging" }, { role: "link", name: "Notifications" }, { role: "button", name: "Ansh Patel Me" }, { role: "button", name: "For Business" }, { role: "link", name: "Reactivate Premium: 50% Off" }, { role: "generic", name: "", children: [ [Object ...], [Object ...], [Object ...] ] }, { role: "link", name: "Visit profile for Ansh Patel" }, { role: "button", name: "Start a post" }, { role: "button", name: "Add media" }, { role: "link", name: "Create an event" }, { role: "link", name: "Write an article on LinkedIn" }, { role: "button", name: "Sort by: Top Sort order dropdown button" }, { role: "heading", name: "feed updates", level: 1 }, { role: "heading", name: "Feed post number 1", level: 2 }, { role: "link", name: "Ilan’s profile photo" }, { role: "link", name: "Ilan Aguilar Sanchez" }, { role: "StaticText", name: " commented on this" }, { role: "button", name: "Open control menu" }, { role: "button", name: "Dismiss post by Kojo Frimpong" }, { role: "link", name: "Kojo Frimpong" }, { role: "link", name: "View: Kojo Frimpong • 2nd Incoming Financial Analyst @General Mills / Finance Student at University of St. Thomas" }, { role: "link", name: "19h • Edited • " }, { role: "button", name: "Follow" }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "button", name: "Activate to view larger image, Image preview" }, { role: "button", name: "Emmanuel Blabuh and 107 others reacted to Kojo Frimpong’s post" }, { role: "button", name: "42 comments on Kojo Frimpong’s post" }, { role: "StaticText", name: "·" }, { role: "button", name: "6 reposts of Kojo Frimpong’s post" }, { role: "button", name: "React Like to Kojo Frimpong’s post", pressed: false }, { role: "button", name: "Open reactions menu" }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "image", name: "Ansh Patel" }, { role: "textbox", name: "Text editor for creating content", value: "\n", multiline: true }, { role: "generic", name: "" }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "button", name: "Add a photo" }, { role: "button", name: "Current selected sort order is Most relevant" }, { role: "article", name: "", children: [ [Object ...], [Object ...], [Object ...], [Object ...], [Object ...], [Object ...], [Object ...], [Object ...], [Object ...], [Object ...] ] }, { role: "button", name: "Load more comments" }, { role: "heading", name: "Feed post number 3", level: 2 }, { role: "link", name: "Pratham’s profile photo" }, { role: "link", name: "Pratham Khandelwal" }, { role: "StaticText", name: " likes this" }, { role: "button", name: "Open control menu" }, { role: "button", name: "Dismiss post by Sunny Parawala" }, { role: "link", name: "Sunny Parawala" }, { role: "link", name: "View: Sunny Parawala (He/Him) • 1st Software Engineer II at Iterable | Data Platform" }, { role: "link", name: "1w • " }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "link", name: "Open article: Iterable a Challenger in the 2023 Gartner® Magic Quadrant™ for Multichannel Marketing Hubs by sprou.tt" }, { role: "link", name: "Open article: Iterable a Challenger in the 2023 Gartner® Magic Quadrant™ for Multichannel Marketing Hubs by sprou.tt" }, { role: "button", name: "Pratham Khandelwal and 6 others reacted to Sunny Parawala’s post" }, { role: "button", name: "React Like to Sunny Parawala’s post", pressed: false }, { role: "button", name: "Open reactions menu" }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "StaticText", name: "Be the first to comment on this" }, { role: "button", name: "Show more feed updates" }, { role: "heading", name: "LinkedIn News", level: 2 }, { role: "generic", name: "", children: [ [Object ...] ] }, { role: "link", name: "Israel-Hamas war: Latest updates Top news • 38,846 readers" }, { role: "link", name: "Appeal of revenge travel is fading 2h ago • 126 readers" }, { role: "link", name: "Taylor Swift film: A new model? 3h ago • 9,687 readers" }, { role: "link", name: "Auto workers vow to switch tactics 3h ago • 6,308 readers" }, { role: "link", name: "SpaceX launches asteroid quest 2h ago • 2,947 readers" }, { role: "button", name: "Show more" }, { role: "link", name: "About" }, { role: "link", name: "Accessibility" }, { role: "link", name: "Help Center" }, { role: "button", name: "Privacy & Terms" }, { role: "link", name: "Ad Choices" }, { role: "link", name: "Advertising" }, { role: "button", name: "Business Services" }, { role: "button", name: "Get the LinkedIn app" }, { role: "button", name: "More options" }, { role: "StaticText", name: "LinkedIn Corporation © 2023" } ]}
+    {"role": "assistant", "function_call": {"name": "click", "arguments": "{\"role\": \"button\", \"name\": \"Search\"}"}},
+    {"role": "assistant", "function_call": {"name": "type", "arguments": "{\"name\": \"Search\", \"role\": \"button\", \"value\": \"GoogleRecruiter\", \"pressEnter\": \"true\"}"}},
