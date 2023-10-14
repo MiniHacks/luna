@@ -17,7 +17,8 @@
     "start": "yarn env-cmd yarn workspaces foreach -pi run start",
     "postinstall": "husky install",
     "test": "echo \"tests completed\"",
-    "update-common": "yarn workspace @luna/common build; yarn install"
+    "update-common": "yarn workspace @luna/common build; yarn install",
+    "atree": "bun packages/electron/scripts/getCurrentAT.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
