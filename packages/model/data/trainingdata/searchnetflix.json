@@ -1,0 +1,19 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "Search Netflix.com"
+        },
+        {
+            "role": "user",
+            "content": "Search Netflix.com"
+        },
+        {
+            "role": "assistant",
+            "function_call": {
+                "name": "type",
+                "arguments": "{\"role\": \"combobox\", \"value\": \"https://www.netflix.com/\", \"pressEnter\": true}"
+            }
+        }
+    ]
+}

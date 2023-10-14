@@ -1,0 +1,19 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "Search how to tie my shoes"
+        },
+        {
+            "role": "user",
+            "content": "Search how to tie my shoes"
+        },
+        {
+            "role": "assistant",
+            "function_call": {
+                "name": "type",
+                "arguments": "{\"role\": \"combobox\", \"value\": \"How to tie my shoes\", \"pressEnter\": true}"
+            }
+        }
+    ]
+}

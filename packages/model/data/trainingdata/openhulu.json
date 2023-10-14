@@ -1,0 +1,19 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "Open Hulu"
+        },
+        {
+            "role": "user",
+            "content": "Open Hulu"
+        },
+        {
+            "role": "assistant",
+            "function_call": {
+                "name": "type",
+                "arguments": "{\"role\": \"combobox\", \"value\": \"https://www.hulu.com/\", \"pressEnter\": true}"
+            }
+        }
+    ]
+}

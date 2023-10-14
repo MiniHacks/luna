@@ -1,0 +1,19 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "Search funny cat videos"
+        },
+        {
+            "role": "user",
+            "content": "Search funny cat videos"
+        },
+        {
+            "role": "assistant",
+            "function_call": {
+                "name": "type",
+                "arguments": "{\"role\": \"combobox\", \"value\": \"Funny cat videos\", \"pressEnter\": true}"
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "Open YouTube"
+        },
+        {
+            "role": "user",
+            "content": "Open YouTube"
+        },
+        {
+            "role": "assistant",
+            "function_call": {
+                "name": "type",
+                "arguments": "{\"role\": \"combobox\", \"value\": \"https://www.youtube.com/\", \"pressEnter\": true}"
+            }
+        }
+    ]
+}
