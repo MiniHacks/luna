@@ -6,7 +6,7 @@
   "properties": {
     "task": {
       "type": "string",
-      "description": "The task to complete",
+      "description": "The task to complete"
     },
     "steps": {
       "type": "array",

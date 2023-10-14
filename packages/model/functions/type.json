@@ -5,19 +5,19 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the element to type into",
+      "description": "The name of the element to type into"
     },
     "role": {
       "type": "string",
-      "description": "The role of the element to type into",
+      "description": "The role of the element to type into"
     },
     "value": {
       "type": "string",
-      "description": "The value to type into the element",
+      "description": "The value to type into the element"
     },
     "pressEnter": {
       "type": "boolean",
-      "description": "Whether or not to press enter after typing the value",
+      "description": "Whether or not to press enter after typing the value"
     }
   },
   "required": ["name", "role", "value"]

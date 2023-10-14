@@ -5,7 +5,7 @@
   "properties": {
     "url": {
       "type": "string",
-      "description": "The URL of the page to read",
+      "description": "The URL of the page to read"
     }
   },
   "required": ["url"]

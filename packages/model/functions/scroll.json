@@ -6,7 +6,7 @@
         "properties": {
             "selector": {
                 "type": "string",
-                "description": "A description of the element on the page to scroll to",
+                "description": "A description of the element on the page to scroll to"
             }
         },
         "required": [

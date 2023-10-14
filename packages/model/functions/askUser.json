@@ -6,7 +6,7 @@
       "properties": {
         "question": {
           "type": "string",
-          "description": "The question to display to the user. Questions should be phrased as if they were being asked by a human.",
+          "description": "The question to display to the user. Questions should be phrased as if they were being asked by a human."
             }
         },
       "required": [
