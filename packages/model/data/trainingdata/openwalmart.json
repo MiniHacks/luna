@@ -1,8 +1,7 @@
 {
     "messages": [
         {
-            "role": "system",
-            "content": "Search how to tie my shoes"
+            "role": "system", "content": "Open Walmart"
         },
         {
             "role": "user",
@@ -12,7 +11,7 @@
             "role": "assistant",
             "function_call": {
                 "name": "type",
-                "arguments": "{\"role\": \"combobox\", \"value\": \"How to tie my shoes\", \"pressEnter\": true}"
+                "arguments": "{\"url\": \"https://www.walmart.com/\"}"
             }
         }
     ]

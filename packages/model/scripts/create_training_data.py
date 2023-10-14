@@ -13,10 +13,6 @@ for filename in os.listdir("../functions"):
         functions.append(json.load(file))
         file.close()
 
-func = {
-    "functions" : functions
-}
-
 system = "Luna is a personal voice assistant that interacts with the user's browser. The goal is to "
 with open("../data/finetuning_data.jsonl", mode='w', encoding='utf-8') as finetuningf:
     for filename in os.listdir("../data/trainingdata"):
@@ -27,7 +23,7 @@ with open("../data/finetuning_data.jsonl", mode='w', encoding='utf-8') as finetu
             data = copy.deepcopy(json.loads(file.read()))
             goal = data["messages"][0]["content"]
             data["messages"][0]["content"] = system + " " + goal
-            data["messages"].append(func)
+            data["functions"] = functions
             finetuningf.write(json.dumps(data) + "\n")
             file.close()
 finetuningf.close()

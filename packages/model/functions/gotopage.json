@@ -1,0 +1,16 @@
+{
+    "name": "gotoPage",
+    "description": "Go to a given page",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL of the page to go to"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  }

@@ -1,18 +1,17 @@
-{
-    "messages": [
+{"messages": [
         {
-            "role": "system",
-            "content": "Search how to tie my shoes"
+            "role": "system", "content": "Open Amazon"
         },
         {
             "role": "user",
             "content": "[ { \"role\": \"combobox\", \"name\": \"Search Google or type a URL\" }, { \"role\": \"button\", \"name\": \"Search by voice\" }, { \"role\": \"button\", \"name\": \"Search by image\" }, { \"role\": \"link\", \"name\": \"Gmail\", \"description\": \"Gmail\", \"children\": [ [Object], [Object] ] }, { \"role\": \"link\", \"name\": \"Google Drive\", \"description\": \"Google Drive\", \"children\": [ [Object], [Object] ] }, { \"role\": \"button\", \"name\": \"Add shortcut\", \"description\": \"Add shortcut\" }, { \"role\": \"button\", \"name\": \"Customize Chrome\", \"description\": \"Customize this page\", \"pressed\": false } ]"
+
         },
         {
             "role": "assistant",
             "function_call": {
                 "name": "type",
-                "arguments": "{\"role\": \"combobox\", \"value\": \"How to tie my shoes\", \"pressEnter\": true}"
+                "arguments": "{\"url\": \"https://www.amazon.com/\"}"
             }
         }
     ]

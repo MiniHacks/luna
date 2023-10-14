@@ -2,7 +2,7 @@
     "messages": [
         {
             "role": "system",
-            "content": "Search how to tie my shoes"
+            "content": "What phone should I buy?"
         },
         {
             "role": "user",
@@ -12,7 +12,7 @@
             "role": "assistant",
             "function_call": {
                 "name": "type",
-                "arguments": "{\"role\": \"combobox\", \"value\": \"How to tie my shoes\", \"pressEnter\": true}"
+                "arguments": "{\"role\": \"combobox\", \"value\": \"Most popular phones right now\", \"pressEnter\": true}"
             }
         }
     ]
