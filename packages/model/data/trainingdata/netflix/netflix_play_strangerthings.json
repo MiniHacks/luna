@@ -1,8 +1,0 @@
-{
-  "messages": [
-    {"role": "system", "content": "Luna, open Netflix and play Stranger Things" },
-    {"role": "user", "content":  "Steps Done: gotoPage:url:https://www.netflix.com/browse, askUser:question:What profile should I choose?, click:role:link:name:Stuti, click:role:button:name:Search, type:name:Search:role:button:value:Stranger Things:pressEnter:true \n
-    {"role": "assistant", "function_call":  {"name": "click", "arguments": "{\"role\": \"link\", \"name\": \"Stranger Things\"}"}}
-  ]
-}
-

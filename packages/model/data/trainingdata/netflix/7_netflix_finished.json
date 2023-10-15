@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luna, open Netflix and play Stranger Things"
+    },
+    {
+      "role": "user",
+      "content": "Steps done: goToPage:url:https://www.netflix.com/browse askUser:Which Netflix profile do you want to use?:Stuti, click:link:Stuti, goToPage:https://www.netflix.com/search?q=Stranger%20Things, click:link:Stranger Things, click:button:Play. {\"url\":\"https://www.netflix.com/watch/80222773?trackId=255824129&tctx=0%2C0%2C72d0c557-013b-4f55-a7d4-673badc58823-26872037%2C72d0c557-013b-4f55-a7d4-673badc58823-26872037%7C2%2Cunknown%2C%2C%2CtitlesResults%2C%2CVideo%3A80057281%2CdetailsPagePlayButton\",\"title\":\"Netflix\",\"content\":[{\"role\":\"generic\",\"name\":\"RATED TV-14 fear, gore, language, smoking\",\"focused\":true,\"children\":[{\"role\":\"Video\",\"name\":\"\"},{\"role\":\"heading\",\"name\":\"RATED TV-14\",\"level\":4},{\"role\":\"StaticText\",\"name\":\"fear, gore, language, smoking\"}]}]}"
+    },
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "finished",
+        "arguments": "{}"
+      }
+    }
+  ]
+}
