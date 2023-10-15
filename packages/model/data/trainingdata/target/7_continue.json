@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luna, add the cheapest bread to my Target cart"
+    },
+    {
+      "role": "user",
+      "content": "Steps done: goToPage:https://target.com, type:searchbox:What can we help you find? suggestions appear below:bread, click:button:Sort: Relevance, click:radio:Price: low to high, click:button:Apply, click:button:Deliver White Sandwich Bread - 20oz - Market Pantry™. {\"url\":\"https://www.target.com/s?searchTerm=bread&tref=typeahead%7Cterm%7Cbread%7C%7C%7Chistory&ignoreBrandExactness=true&sortBy=PriceLow&moveTo=product-list-grid\",\"title\":\"Bread : Target\",\"content\":[{\"role\":\"dialog\",\"name\":\"\",\"modal\":true,\"children\":[{\"role\":\"heading\",\"name\":\"Same Day Delivery\",\"focused\":true,\"level\":2},{\"role\":\"button\",\"name\":\"close\"},{\"role\":\"image\",\"name\":\"Generic Shipt shopper carrying bags\"},{\"role\":\"button\",\"name\":\"Deliver to: 616 Washington Ave SE Apt 407 Free delivery with your membership Change delivery address\",\"children\":[{\"role\":\"button\",\"name\":\"Change delivery address\"}]},{\"role\":\"button\",\"name\":\"Shop from: East Lake Street and Hwy 55 Target As soon as 9am today Change delivery store\",\"children\":[{\"role\":\"button\",\"name\":\"Change delivery store\"}]},{\"role\":\"button\",\"name\":\"Continue\"}]}]}"
+    },
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "click",
+        "arguments": "{\"role\":\"button\",\"name\":\"Continue\"}"
+      }
+    }
+  ]
+}

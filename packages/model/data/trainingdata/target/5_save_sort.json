@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luna, add the cheapest bread to my Target cart"
+    },
+    {
+      "role": "user",
+      "content": "Steps done: goToPage:https://target.com, type:searchbox:What can we help you find? suggestions appear below:bread, click:button:Sort: Relevance, click:radio:Price: low to high. {\"url\":\"https://www.target.com/s?searchTerm=bread&tref=typeahead%7Cterm%7Cbread%7C%7C%7Chistory\",\"title\":\"Bread : Target\",\"content\":[{\"role\":\"dialog\",\"name\":\"\",\"modal\":true,\"children\":[{\"role\":\"heading\",\"name\":\"Sort\",\"level\":2},{\"role\":\"button\",\"name\":\"close\"},{\"role\":\"radio\",\"name\":\"Relevance\",\"checked\":false},{\"role\":\"StaticText\",\"name\":\"Relevance\"},{\"role\":\"radio\",\"name\":\"Featured\",\"checked\":false},{\"role\":\"StaticText\",\"name\":\"Featured\"},{\"role\":\"radio\",\"name\":\"Price: low to high\",\"focused\":true,\"checked\":true},{\"role\":\"StaticText\",\"name\":\"Price: low to high\"},{\"role\":\"radio\",\"name\":\"Price: high to low\",\"checked\":false},{\"role\":\"StaticText\",\"name\":\"Price: high to low\"},{\"role\":\"radio\",\"name\":\"Average ratings\",\"checked\":false},{\"role\":\"StaticText\",\"name\":\"Average ratings\"},{\"role\":\"radio\",\"name\":\"Best seller\",\"checked\":false},{\"role\":\"StaticText\",\"name\":\"Best seller\"},{\"role\":\"radio\",\"name\":\"Newest\",\"checked\":false},{\"role\":\"StaticText\",\"name\":\"Newest\"},{\"role\":\"button\",\"name\":\"Cancel\"},{\"role\":\"button\",\"name\":\"Apply\"}]}]}"
+    },
+
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "click",
+        "arguments": "{\"role\":\"button\",\"name\":\"Apply\"}"
+      }
+    }
+  ]
+}

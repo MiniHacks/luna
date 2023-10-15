@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luna, add the cheapest bread to my Target cart"
+    },
+    {
+      "role": "user",
+      "content": "Steps done: goToPage:https://target.com, type:searchbox:What can we help you find? suggestions appear below:bread, click:button:Sort: Relevance, click:radio:Price: low to high, click:button:Apply, click:button:Deliver White Sandwich Bread - 20oz - Market Pantry™, click:button:Continue. {\"url\":\"https://www.target.com/s?searchTerm=bread&tref=typeahead%7Cterm%7Cbread%7C%7C%7Chistory&ignoreBrandExactness=true&sortBy=PriceLow&moveTo=product-list-grid\",\"title\":\"Bread : Target\",\"content\":[{\"role\":\"dialog\",\"name\":\"\",\"modal\":true,\"children\":[{\"role\":\"heading\",\"name\":\"Added to cart\",\"focused\":true,\"level\":2},{\"role\":\"button\",\"name\":\"close\"},{\"role\":\"heading\",\"name\":\"Same Day Delivery\",\"level\":3},{\"role\":\"StaticText\",\"name\":\"Get it as soon as 9am today\"},{\"role\":\"image\",\"name\":\"White Sandwich Bread - 20oz - Market Pantry™\"},{\"role\":\"heading\",\"name\":\"White Sandwich Bread - 20oz - Market Pantry™\",\"level\":4},{\"role\":\"StaticText\",\"name\":\"Edit delivery method in cart\"},{\"role\":\"button\",\"name\":\"Continue shopping\"},{\"role\":\"link\",\"name\":\"View cart & check out\"},{\"role\":\"heading\",\"name\":\"Frequently also added\",\"level\":2},{\"role\":\"link\",\"name\":\"Clementines - 3lb Bag $4.29 Clementines - 3lb Bag\"},{\"role\":\"button\",\"name\":\"Add Clementines - 3lb Bag to cart\"},{\"role\":\"link\",\"name\":\"Arm & Hammer Pure Baking Soda - 1lb $1.29 Arm & Hammer Pure Baking Soda - 1lb Sponsored\"},{\"role\":\"button\",\"name\":\"Add Arm & Hammer Pure Baking Soda - 1lb to cart\"},{\"role\":\"link\",\"name\":\"Avocado - each $0.85 Avocado - each\"},{\"role\":\"button\",\"name\":\"Add Avocado - each to cart\"},{\"role\":\"link\",\"name\":\"Fairlife Lactose-Free Skim Milk - 52 fl oz $4.19 Fairlife Lactose-Free Skim Milk - 52 fl oz Sponsored\"},{\"role\":\"button\",\"name\":\"Add Fairlife Lactose-Free Skim Milk - 52 fl oz to cart\"},{\"role\":\"button\",\"name\":\"Show 20 more Frequently also added items\"},{\"role\":\"button\",\"name\":\"Close\"}]}]}"
+    },
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "click",
+        "arguments": "{\"role\":\"link\",\"name\":\"View cart & check out\"}"
+      }
+    }
+  ]
+}
