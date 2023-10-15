@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luna, open Netflix and play Stranger Things"
+    },
+    {
+      "role": "user",
+      "content": "Steps done: goToPage:https://www.netflix.com/browse, askUser:Which Netflix profile do you want to use?:Stuti. {\"url\":\"https://www.netflix.com/browse\",\"title\":\"Netflix\",\"content\":[{\"role\":\"heading\",\"name\":\"Who's watching?\",\"level\":1},{\"role\":\"link\",\"name\":\"Akshat\"},{\"role\":\"link\",\"name\":\"Shetal\"},{\"role\":\"link\",\"name\":\"Stuti\"},{\"role\":\"link\",\"name\":\"Jignesh\"},{\"role\":\"link\",\"name\":\"Diya\"},{\"role\":\"link\",\"name\":\"Manage Profiles\"}]}"
+    },
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "click",
+        "arguments": "{\"role\": \"link\", \"name\": \"Stuti\"}"
+      }
+    }
+  ]
+}

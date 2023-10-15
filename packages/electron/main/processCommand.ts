@@ -68,8 +68,8 @@ class CommandProcessor {
     if (!this.browser || !this.page || !function_call.arguments) return true;
     const args = JSON.parse(function_call.arguments);
     try {
-      switch (function_call.name) {
-        case askUser.name: {
+      switch (function_call.name?.toLowerCase()) {
+        case askUser.name.toLowerCase(): {
           const ans = askUserImplementation(args, this.page);
           if (ans) {
             this.messages.push({
@@ -80,10 +80,10 @@ class CommandProcessor {
           }
           break;
         }
-        case finished.name: {
+        case finished.name.toLowerCase(): {
           return true;
         }
-        case gotoPage.name: {
+        case gotoPage.name.toLowerCase(): {
           await gotoPageImplementation(args, this.page);
           this.messages.push({
             role: "function",
@@ -92,7 +92,7 @@ class CommandProcessor {
           });
           break;
         }
-        case readPage.name: {
+        case readPage.name.toLowerCase(): {
           readPageImplementation();
           this.messages.push({
             role: "function",
@@ -101,7 +101,7 @@ class CommandProcessor {
           });
           break;
         }
-        case type.name: {
+        case type.name.toLowerCase(): {
           await typeImplementation(args, this.page);
           this.messages.push({
             role: "function",
@@ -110,7 +110,7 @@ class CommandProcessor {
           });
           break;
         }
-        case click.name: {
+        case click.name.toLowerCase(): {
           await clickImplementation(args, this.page);
           this.messages.push({
             role: "function",
@@ -147,7 +147,9 @@ class CommandProcessor {
 }
 
 export const processCommand = async (command: string): Promise<void> => {
+  console.log(`[pc] Processing command ${command}`);
   const commandProcessor = new CommandProcessor(command);
   await commandProcessor.connectToBrowser();
+  console.log("[pc] Connected to browser");
   await commandProcessor.runStep();
 };
