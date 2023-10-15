@@ -29,27 +29,46 @@ def speech_recognize_keyword_from_microphone():
     def recognizing_cb(evt):
         """callback for recognizing event"""
         if evt.result.reason == speechsdk.ResultReason.RecognizingKeyword:
-            print('RECOGNIZING KEYWORD: {}'.format(evt))
+            print('HEY LUNA HEARD!!')
         elif evt.result.reason == speechsdk.ResultReason.RecognizingSpeech:
-            print('RECOGNIZING: {}'.format(evt))
-        requests.get('https://localhost:8000/ui/process', data=evt)  
+            print('RECOGNIZING')
+        requests.get(f"http://localhost:8000/process/{evt.result.text}")
 
     def recognized_cb(evt):
         """callback for recognized event"""
         if evt.result.reason == speechsdk.ResultReason.RecognizedKeyword:
-            print('RECOGNIZED KEYWORD: {}'.format(evt))
+            print('RECOGNIZED KEYWORD')
         elif evt.result.reason == speechsdk.ResultReason.RecognizedSpeech:
-            print('RECOGNIZED: {}'.format(evt))
+            print('RECOGNIZED')
         elif evt.result.reason == speechsdk.ResultReason.NoMatch:
-            print('NOMATCH: {}'.format(evt))
-        requests.get('https://localhost:ui/process', data=evt)   
+            print('NOMATCH')
+
+        print(evt.result.text)
+        requests.get(f"http://localhost:8000/process/{evt.result.text}")
+
+    def canceled_cb(evt):
+        """callback for canceled event"""
+        print('CANCELED')
+        requests.get('http://localhost:8000/status/CANCELED', data=evt)
+
+    def session_started_cb(evt):
+        """callback for session started event"""
+        print('SESSION STARTED')
+        requests.get('http://localhost:8000/status/ACTIVE', data=evt)
+
+    def session_stopped_cb(evt):
+        """callback for session stopped event"""
+        print('SESSION STOPPED + FINALIZED')
+        url = f"http://localhost:8000/finalize"
+        requests.get(url)
+#         requests.get('http://localhost:8000/status/STOPPED', data=evt)
 
     # Connect callbacks to the events fired by the speech recognizer
     speech_recognizer.recognizing.connect(recognizing_cb)
     speech_recognizer.recognized.connect(recognized_cb)
-    speech_recognizer.session_started.connect(lambda evt: print('SESSION STARTED: {}'.format(evt)))
-    speech_recognizer.session_stopped.connect(lambda evt: print('SESSION STOPPED {}'.format(evt)))
-    speech_recognizer.canceled.connect(lambda evt: print('CANCELED {}'.format(evt)))
+    speech_recognizer.session_started.connect(session_started_cb)
+    speech_recognizer.session_stopped.connect(session_stopped_cb)
+    speech_recognizer.canceled.connect(canceled_cb)
     # stop continuous recognition on either session stopped or canceled events
     # speech_recognizer.session_stopped.connect(stop_cb)
     # speech_recognizer.canceled.connect(stop_cb)
@@ -58,7 +77,7 @@ def speech_recognize_keyword_from_microphone():
     speech_recognizer.start_keyword_recognition(model)
     print('Say something starting with "{}" followed by whatever you want...'.format(keyword))
     while not done:
-        time.sleep(.5)
+        time.sleep(.05)
 
     # speech_recognizer.stop_keyword_recognition()
 speech_recognize_keyword_from_microphone()

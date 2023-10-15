@@ -30,9 +30,14 @@ const Home: NextPage = () => {
           px={8}
           minW={300}
           py={4}
+          pt={1}
           background={"rgba(53, 53, 53, 0.7)"}
         >
           <Input
+            opacity={0}
+            _hover={{
+              opacity: 1,
+            }}
             placeholder={"prompt"}
             color={"white"}
             size={"xs"}

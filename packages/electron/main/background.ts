@@ -2,8 +2,29 @@ import { app, BrowserWindow, dialog, ipcMain, screen } from "electron";
 import * as path from "path";
 import serve from "electron-serve";
 import { Channels } from "@luna/common";
+import express from "express";
 import { createWindow } from "./helpers/createWindow";
 import { processCommand } from "./processCommand";
+
+const eapp = express();
+
+let mainWindow: BrowserWindow;
+// eapp.get("/", (req, res) => {
+//   res.send("Hello World!");
+// });
+
+let currentPrompt = "";
+eapp.get("/process/:command", async (req, res) => {
+  const { command } = req.params;
+  mainWindow.webContents.send(Channels.CurrentVoicePrompt, command);
+  currentPrompt = command;
+  res.send("done");
+});
+
+eapp.get("/finalize", async (req, res) => {
+  res.send("done");
+  await processCommand(currentPrompt);
+});
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -33,7 +54,6 @@ if (process.defaultApp) {
     return;
   }
 
-  let mainWindow: BrowserWindow;
   await app.whenReady();
 
   app.on("second-instance", (event, commandLine, workingDirectory) => {
@@ -104,4 +124,8 @@ ipcMain.on(Channels.CurrentVoicePrompt, (event, arg) => {
   processCommand(arg).then((response) => {
     console.log("response:", response);
   });
+});
+
+eapp.listen(8000, () => {
+  console.log("electron server listening on port 8000");
 });
