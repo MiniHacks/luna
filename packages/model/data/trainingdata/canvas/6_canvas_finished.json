@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luna, open Canvas and open an assignment."
+    },
+    {
+      "role": "user",
+      "content": "Steps done: goToPage:https://canvas.umn.edu, askUser: What class should I choose?:CSCI 3081W, click:link:CSCI 3081W (010/020) Program Design and Development (Fall 2023) CSCI 3081W (010/020) 2023 Fall (08/08/2023-01/06/2024), click:link:Assignments, click:link:Homework 2 - UML Class Diagrams. {\"url\":\"https://canvas.umn.edu/courses/391400/assignments/3339212\",\"title\":\"Homework 2 - UML Class Diagrams\",\"content\":[{\"role\":\"link\",\"name\":\"Dashboard\"},{\"role\":\"button\",\"name\":\"Account\"},{\"role\":\"link\",\"name\":\"Dashboard\"},{\"role\":\"button\",\"name\":\"Courses\"},{\"role\":\"button\",\"name\":\"Groups\"},{\"role\":\"link\",\"name\":\"Calendar\"},{\"role\":\"link\",\"name\":\"Inbox\"},{\"role\":\"button\",\"name\":\"History\"},{\"role\":\"button\",\"name\":\"Help\"},{\"role\":\"button\",\"name\":\"Expand global navigation \",\"description\":\"Expand global navigation\"},{\"role\":\"button\",\"name\":\"Hide Courses Navigation Menu\"},{\"role\":\"link\",\"name\":\"CSCI 3081W (010/020)\"},{\"role\":\"link\",\"name\":\"Assignments\"},{\"role\":\"link\",\"name\":\"Homework 2 - UML Class Diagrams\"},{\"role\":\"StaticText\",\"name\":\"2023 Fall (08/08/2023-01/06/2024)\"},{\"role\":\"link\",\"name\":\"Home\"},{\"role\":\"link\",\"name\":\"Syllabus\"},{\"role\":\"link\",\"name\":\"Announcements\"},{\"role\":\"link\",\"name\":\"Office Hours\"},{\"role\":\"link\",\"name\":\"Grades 9\"},{\"role\":\"link\",\"name\":\"Assignments\"},{\"role\":\"link\",\"name\":\"Piazza\"},{\"role\":\"link\",\"name\":\"Gradescope\"},{\"role\":\"link\",\"name\":\"Files\"},{\"role\":\"link\",\"name\":\"Pages\"},{\"role\":\"link\",\"name\":\"People\"},{\"role\":\"link\",\"name\":\"Student Rating of Teaching\"},{\"role\":\"link\",\"name\":\"Library Course Materials\"},{\"role\":\"link\",\"name\":\"NameCoach\"},{\"role\":\"link\",\"name\":\"Media Gallery\"},{\"role\":\"heading\",\"name\":\"Homework 2 - UML Class Diagrams\",\"level\":1},{\"role\":\"button\",\"name\":\"Start Assignment\"},{\"role\":\"StaticText\",\"name\":\"Due Oct 22  by  11:59pm Points   100 Submitting   a file upload Available   until Oct 22 at 11:59pm\"},{\"role\":\"link\",\"name\":\"hw2.pdf\"},{\"role\":\"button\",\"name\":\"Download hw2.pdf\"},{\"role\":\"StaticText\",\"name\":\"Problem 1 should be a .doc/.docx/.pdf upload. Problems 2-4 can be image uploads, .pdf, etc. Make sure to check whether the submission is visible. For example, if your text is really small, it's too hard to grade. This is an individual assignment.  Looking at someone else’s UML class diagram(s) is considered academic dishonesty.\"}]}"
+    },
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "finished",
+        "arguments": "{}"
+      }
+    }
+  ]
+}
