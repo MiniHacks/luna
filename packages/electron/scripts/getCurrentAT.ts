@@ -14,9 +14,7 @@ const main = async () => {
   }
 
   console.log(
-    `Steps done: x:y, a:b. ${JSON.stringify(
-      await createMessageFromPageContent(page)
-    )}`
+    JSON.stringify(await createMessageFromPageContent(page), null, 2)
   );
 };
 

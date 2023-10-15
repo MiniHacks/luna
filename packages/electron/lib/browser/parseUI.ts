@@ -189,8 +189,13 @@ export const getParseableUI = async (
 };
 
 export const createMessageFromPageContent = async (
-  page: Page
+  page: Page,
+  pastSteps: string[] = []
 ): Promise<ChatCompletionRequestMessage> => {
+  let steps = "none";
+  if (pastSteps.length > 0) {
+    steps = pastSteps.join(", ");
+  }
   const url = page.url();
   const title = await page.title();
   const content = await getParseableUI(page);
@@ -201,5 +206,5 @@ export const createMessageFromPageContent = async (
     content,
   }).substring(0, 8000);
 
-  return um(message);
+  return um(`Steps done: ${steps}. ${message}`);
 };
