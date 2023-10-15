@@ -1,13 +1,13 @@
-import { ElementHandle, Page } from "puppeteer-core";
+import { ElementHandle, Page, SerializedAXNode } from "puppeteer-core";
 
-type AriaNode = {
-  role: string;
-  name: string;
+export const axNodeToSelector = (node: SerializedAXNode): string => {
+  const { name, role } = node;
+  return `aria/${name ?? ""}[role="${role}"]`;
 };
+
 export const getAriaNode = async (
-  node: AriaNode,
+  node: SerializedAXNode,
   page: Page
 ): Promise<ElementHandle | null> => {
-  const { role, name } = node;
-  return page.$(`aria/${name}[role="${role}"]`);
+  return page.$(axNodeToSelector(node));
 };
