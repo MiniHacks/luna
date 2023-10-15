@@ -13,7 +13,7 @@ const main = async () => {
     return;
   }
 
-  console.log(createMessageFromPageContent(page));
+  console.log(await createMessageFromPageContent(page));
 };
 
 main().then(() => process.exit(0));
