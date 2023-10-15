@@ -12,11 +12,12 @@ import { askUser, askUserImplementation } from "../lib/functions/askUser";
 import { finished } from "../lib/functions/finished";
 import { gotoPage, gotoPageImplementation } from "../lib/functions/gotoPage";
 import { type, typeImplementation } from "../lib/functions/type";
-import { readPage, readPageImplementation } from "../lib/functions/readPage";
 import { sleep } from "../lib/vendor/sleep";
 
 class CommandProcessor {
   messages: ChatCompletionRequestMessage[];
+
+  previousSteps: string[] = [];
 
   browser: Browser | null = null;
 
@@ -40,16 +41,20 @@ class CommandProcessor {
 
   async getNextStep(): Promise<ChatCompletionRequestMessageFunctionCall | null> {
     if (!this.browser || !this.page) return null;
-    const message = await createMessageFromPageContent(this.page);
+    const message = await createMessageFromPageContent(
+      this.page,
+      this.previousSteps
+    );
 
-    this.messages.push(message);
+    const chatMessages = [...this.messages, message];
+    console.log("chatMessages:", chatMessages);
 
     const completion = await getCompletion({
-      messages: this.messages,
-      functions: [click, askUser, finished, gotoPage, type],
+      messages: chatMessages,
+      functions: [click, finished, gotoPage, type],
     });
 
-    const nextStep = completion.choices[0].message;
+    const nextStep = completion?.choices[0].message;
     if (!nextStep?.function_call) {
       console.log("No subagent message");
       return null;
@@ -72,11 +77,8 @@ class CommandProcessor {
         case askUser.name.toLowerCase(): {
           const ans = askUserImplementation(args, this.page);
           if (ans) {
-            this.messages.push({
-              role: "function",
-              name: askUser.name,
-              content: ans,
-            });
+            this.previousSteps.push(`askUser:${args.question}`);
+            return true;
           }
           break;
         }
@@ -85,38 +87,24 @@ class CommandProcessor {
         }
         case gotoPage.name.toLowerCase(): {
           await gotoPageImplementation(args, this.page);
-          this.messages.push({
-            role: "function",
-            name: gotoPage.name,
-            content: "{ success: true }",
-          });
+          this.previousSteps.push(`gotoPage:${args.url}`);
           break;
         }
-        case readPage.name.toLowerCase(): {
-          readPageImplementation();
-          this.messages.push({
-            role: "function",
-            name: readPage.name,
-            content: "{ success: true }",
-          });
-          break;
-        }
+        // case readPage.name.toLowerCase(): {
+        //   readPageImplementation();
+        //
+        //   break;
+        // }
         case type.name.toLowerCase(): {
           await typeImplementation(args, this.page);
-          this.messages.push({
-            role: "function",
-            name: type.name,
-            content: "{ success: true }",
-          });
+          this.previousSteps.push(
+            `type:${args.role}:${args.name}:${args.value}`
+          );
           break;
         }
         case click.name.toLowerCase(): {
           await clickImplementation(args, this.page);
-          this.messages.push({
-            role: "function",
-            name: click.name,
-            content: "{ success: true }",
-          });
+          this.previousSteps.push(`click:${args.role}:${args.name}`);
           break;
         }
         default: {
@@ -151,5 +139,11 @@ export const processCommand = async (command: string): Promise<void> => {
   const commandProcessor = new CommandProcessor(command);
   await commandProcessor.connectToBrowser();
   console.log("[pc] Connected to browser");
-  await commandProcessor.runStep();
+  let done = false;
+  let steps = 0;
+  while (!done && steps < 20) {
+    // eslint-disable-next-line no-await-in-loop
+    done = await commandProcessor.runStep();
+    steps += 1;
+  }
 };
