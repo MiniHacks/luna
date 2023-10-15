@@ -1,7 +1,7 @@
 {
     "messages": [
         {
-            "role": "system", "content": "Open Netflix"
+            "role": "system", "content": "Luna would you please open Netflix"
         },
         {
             "role": "user",

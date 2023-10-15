@@ -1,6 +1,6 @@
 {"messages": [
         {
-            "role": "system", "content": "Open Amazon"
+            "role": "system", "content": "Luna can you please open Amazon"
         },
         {
             "role": "user",

@@ -2,7 +2,7 @@
     "messages": [
         {
             "role": "system",
-            "content": "Search how to tie my shoes"
+            "content": "Luna can you search how to tie my shoes"
         },
         {
             "role": "user",

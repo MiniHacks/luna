@@ -2,7 +2,7 @@
     "messages": [
         {
             "role": "system",
-            "content": "Where is the nearest food?"
+            "content": "Luna where is the nearest food?"
         },
         {
             "role": "user",

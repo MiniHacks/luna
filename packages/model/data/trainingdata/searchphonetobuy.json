@@ -2,7 +2,7 @@
     "messages": [
         {
             "role": "system",
-            "content": "What phone should I buy?"
+            "content": "Luna what phone should I buy?"
         },
         {
             "role": "user",

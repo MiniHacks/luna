@@ -1,7 +1,7 @@
 {
     "messages": [
         {
-            "role": "system", "content": "Open Walmart"
+            "role": "system", "content": "Luna open Walmart"
         },
         {
             "role": "user",

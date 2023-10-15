@@ -2,7 +2,7 @@
     "messages": [
         {
             "role": "system",
-            "content": "Search funny cat videos"
+            "content": "Luna please search funny cat videos"
         },
         {
             "role": "user",

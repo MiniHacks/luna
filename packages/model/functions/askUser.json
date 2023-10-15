@@ -1,5 +1,4 @@
-{
-    "name": "askUser",
+{ "name": "askUser",
     "description": "Prompt the user for input. The user's response can be used to fill out a form, answer a question, or click the right button.",
     "parameters": {
       "type": "object",
