@@ -12,7 +12,7 @@
       "role": "assistant",
       "function_call": {
         "name": "type",
-        "arguments": "{\"name\": \"Send message to\", \"role\": \"combobox\", \"value\": \"Tatyana Borisova\", pressEnter: false}"
+        "arguments": "{\"name\": \"Search Messenger\", \"role\": \"combobox\", \"value\": \"Tatyana Borisova\", pressEnter: false}"
       }
     }
   ]
