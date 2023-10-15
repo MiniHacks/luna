@@ -13,7 +13,9 @@ const main = async () => {
     return;
   }
 
-  console.log(await createMessageFromPageContent(page));
+  console.log(
+    `Steps done: x:y, a:b. ${await createMessageFromPageContent(page)}`
+  );
 };
 
 main().then(() => process.exit(0));
