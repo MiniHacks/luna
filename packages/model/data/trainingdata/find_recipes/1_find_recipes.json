@@ -1,0 +1,17 @@
+{
+  "messages": [
+    {"role": "system", "content": "Hey Luna, find me a recipe for pumpkin pie."},
+    {
+      "role": "user",
+      "content": "Steps Done: none. {\"url\":\"https://www.google.com/\",\"title\":\"Google\",\"content\":[{\"role\":\"link\",\"name\":\"About\"},{\"role\":\"link\",\"name\":\"Store\"},{\"role\":\"link\",\"name\":\"Gmail (opens a new tab)\"},{\"role\":\"link\",\"name\":\"Search for Images (opens a new tab)\"},{\"role\":\"button\",\"name\":\"Search Labs\"},{\"role\":\"button\",\"name\":\"Google apps\"},{\"role\":\"button\",\"name\":\"Google Account: Samyok Nepal (nepalsamyok@gmail.com)\"},{\"role\":\"image\",\"name\":\"Google\"},{\"role\":\"combobox\",\"name\":\"Search\",\"description\":\"Search\",\"focused\":true,\"autocomplete\":\"both\",\"haspopup\":\"listbox\"},{\"role\":\"button\",\"name\":\"Search by voice\"},{\"role\":\"button\",\"name\":\"Search by image\"},{\"role\":\"button\",\"name\":\"Google Search\",\"description\":\"Google Search\"},{\"role\":\"button\",\"name\":\"I'm Feeling Lucky\",\"description\":\"I'm Feeling Lucky\"},{\"role\":\"button\",\"name\":\"Try AI-powered overviews when you search\"},{\"role\":\"link\",\"name\":\"Advertising\"},{\"role\":\"link\",\"name\":\"Business\"},{\"role\":\"link\",\"name\":\"How Search works\"},{\"role\":\"link\",\"name\":\"Our third decade of climate action: join us\"},{\"role\":\"link\",\"name\":\"Privacy\"},{\"role\":\"link\",\"name\":\"Terms\"},{\"role\":\"button\",\"name\":\"Settings\",\"haspopup\":\"menu\"}]}\n{\n  role: \"user\",\n  content: \"{\\\"url\\\":\\\"https://www.google.com/\\\",\\\"title\\\":\\\"Google\\\",\\\"content\\\":[{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"About\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Store\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Gmail (opens a new tab)\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Search for Images (opens a new tab)\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Search Labs\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Google apps\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Google Account: Samyok Nepal (nepalsamyok@gmail.com)\\\"},{\\\"role\\\":\\\"image\\\",\\\"name\\\":\\\"Google\\\"},{\\\"role\\\":\\\"combobox\\\",\\\"name\\\":\\\"Search\\\",\\\"description\\\":\\\"Search\\\",\\\"focused\\\":true,\\\"autocomplete\\\":\\\"both\\\",\\\"haspopup\\\":\\\"listbox\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Search by voice\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Search by image\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Google Search\\\",\\\"description\\\":\\\"Google Search\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"I'm Feeling Lucky\\\",\\\"description\\\":\\\"I'm Feeling Lucky\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Try AI-powered overviews when you search\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Advertising\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Business\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"How Search works\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Our third decade of climate action: join us\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Privacy\\\"},{\\\"role\\\":\\\"link\\\",\\\"name\\\":\\\"Terms\\\"},{\\\"role\\\":\\\"button\\\",\\\"name\\\":\\\"Settings\\\",\\\"haspopup\\\":\\\"menu\\\"}]}\"\n}\n"
+    },
+    {
+      "role": "assistant",
+      "function_call": {
+        "name": "type",
+        "arguments":
+          "{\"role\": \"combobox\", \"name\": \"Search\", \"value\": \"pumpkin pie recipes\"}"
+      }
+    }
+  ]
+}
