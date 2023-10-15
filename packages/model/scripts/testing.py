@@ -1,6 +1,6 @@
 import openai
 openai.api_key = "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"
-model_id = "ft:gpt-3.5-turbo-0613:samyok::89lRGl0i"
+model_id = "ft:gpt-3.5-turbo-0613:samyok::89sfDGan"
 google_content = "[ { \"role\": \"combobox\", \"name\": \"Search Google or type a URL\" }, { \"role\": \"button\", \"name\": \"Search by voice\" }, { \"role\": \"button\", \"name\": \"Search by image\" }, { \"role\": \"link\", \"name\": \"Gmail\", \"description\": \"Gmail\", \"children\": [ [Object], [Object] ] }, { \"role\": \"link\", \"name\": \"Google Drive\", \"description\": \"Google Drive\", \"children\": [ [Object], [Object] ] }, { \"role\": \"button\", \"name\": \"Add shortcut\", \"description\": \"Add shortcut\" }, { \"role\": \"button\", \"name\": \"Customize Chrome\", \"description\": \"Customize this page\", \"pressed\": false } ]"
 
 completion = openai.ChatCompletion.create(
