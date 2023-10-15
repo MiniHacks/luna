@@ -201,7 +201,5 @@ export const createMessageFromPageContent = async (
     content,
   }).substring(0, 8000);
 
-  console.log(message);
-
   return um(message);
 };
