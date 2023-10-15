@@ -10,6 +10,7 @@
 },
     {
       "role":"assistant",
+      "content": "",
       "function_call" : {
           "name" : "askUser",
           "arguments" : "{\"question\": \"What would you like to order?\"}"

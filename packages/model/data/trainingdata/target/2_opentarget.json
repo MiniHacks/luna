@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "type",
         "arguments": "{\"value\": \"bread\", \"pressEnter\": true, \"role\":\"searchbox\",\"name\":\"What can we help you find? suggestions appear below\"}"

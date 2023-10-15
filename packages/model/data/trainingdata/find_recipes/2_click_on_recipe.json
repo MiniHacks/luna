@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "click",
         "arguments": "{\"role\":\"link\", \"name\":\"Perfect Pumpkin Pie Recipe Allrecipes https://www.allrecipes.com › Pies › Pumpkin Pie Recipes\"}"

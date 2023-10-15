@@ -1,5 +1,4 @@
-{
-  "messages": [
+{"messages": [
     {
       "role": "system",
       "content": "Luna, open Canvas and open an assignment."
@@ -10,6 +9,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "goToPage",
         "arguments": "{\"url\": \"https://canvas.umn.edu/\"}"

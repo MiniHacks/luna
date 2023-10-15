@@ -10,6 +10,7 @@
 },
 {
   "role": "assistant",
+  "content": "",
   "function_call": {
       "name": "askUser",
       "arguments": "{\"questions\": \"What would you like on your burrito bowl?\"}"

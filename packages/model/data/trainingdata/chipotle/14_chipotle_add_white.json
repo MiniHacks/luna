@@ -10,7 +10,8 @@
 },
 {
   "role": "assistant",
-  "function": {
+  "content": "",
+  "function_call": {
       "name": "click",
       "arguments": "{\"role\": \"definition\", \"name\": \"You can select White Rice 210cal\"}"
   }

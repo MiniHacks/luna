@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "click",
         "arguments": "{\"role\": \"link\", \"name\": \"Stuti\"}"

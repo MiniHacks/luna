@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "click",
         "arguments": "{\"role\":\"button\",\"name\":\"Deliver White Sandwich Bread - 20oz - Market Pantry™\"}"

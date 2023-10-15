@@ -10,7 +10,8 @@
 },
 {
   "role": "assistant",
-  "function": {
+  "content": "",
+  "function_call": {
       "name": "click",
       "arguments": "{\"role\": \"generic\", \"name\": \"Add to bag\"}"
   }

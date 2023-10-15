@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "goToPage",
         "arguments": "{\"url\": \"https://spotify.com\"}"

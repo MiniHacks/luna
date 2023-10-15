@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "click",
         "arguments": "{\"role\":\"button\",\"name\":\"get him back! Radio Playlist • Spotify\"}"

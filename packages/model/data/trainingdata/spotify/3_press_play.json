@@ -11,6 +11,7 @@
 
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
         "name": "click",
         "arguments": "{\"role\":\"button\",\"name\":\"Play get him back! Radio\"}"

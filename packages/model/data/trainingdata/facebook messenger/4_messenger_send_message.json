@@ -10,6 +10,7 @@
     },
     {
       "role": "assistant",
+      "content": "",
       "function_call": {
           "name":  "type",
           "arguments": "{\"name\": \"Message\", \"role\": \"textbox\", \"value\": \"Hi\", pressEnter: true}"
