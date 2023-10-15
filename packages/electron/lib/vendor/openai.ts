@@ -1,12 +1,11 @@
 import { config } from "dotenv";
 import {
-  OpenAIApi,
+  ChatCompletionRequestMessage,
   Configuration,
   CreateChatCompletionRequest,
-  ChatCompletionRequestMessage,
   CreateChatCompletionResponse,
+  OpenAIApi,
 } from "openai";
-import { AxiosResponse } from "axios";
 import { MODELS } from "../config";
 
 config();
@@ -30,7 +29,7 @@ export const um = (msg: string | string[]): ChatCompletionRequestMessage => ({
 
 export const getCompletion = async (
   params: Partial<CreateChatCompletionRequest>
-): Promise<CreateChatCompletionResponse> => {
+): Promise<CreateChatCompletionResponse | null> => {
   const options: CreateChatCompletionRequest = {
     messages: [],
     model: MODELS.FINE_TUNED,
@@ -41,13 +40,13 @@ export const getCompletion = async (
 
   try {
     const { data } = await openai.createChatCompletion(options);
-    console.log("Completion:", data);
+    console.log("Completion:", JSON.stringify(data));
     return data;
   } catch (e) {
     console.log("Error in getBrowserCompletion");
     console.error(e);
     console.log("Params:", params);
     console.log("Options:", options);
-    return e;
+    return null;
   }
 };

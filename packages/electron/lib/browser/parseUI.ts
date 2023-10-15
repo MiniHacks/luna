@@ -199,7 +199,9 @@ export const createMessageFromPageContent = async (
     url,
     title,
     content,
-  });
+  }).substring(0, 8000);
+
+  console.log(message);
 
   return um(message);
 };

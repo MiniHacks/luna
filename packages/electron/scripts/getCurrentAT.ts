@@ -1,5 +1,5 @@
 import { getActivePage, getBrowser } from "../lib/browser/attachToBrowser";
-import { getParseableUI } from "../lib/browser/parseUI";
+import { createMessageFromPageContent } from "../lib/browser/parseUI";
 
 const main = async () => {
   const browser = await getBrowser();
@@ -13,10 +13,7 @@ const main = async () => {
     return;
   }
 
-  const aTree = await getParseableUI(page);
-
-  //
-  console.log(JSON.stringify(aTree));
+  console.log(createMessageFromPageContent(page));
 };
 
 main().then(() => process.exit(0));
